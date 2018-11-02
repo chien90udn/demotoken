@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="container">
+  <h1>INFO</h1>
+  <div id="address"></div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total amount of tokens</td>
+          <td id="total-token"></td>
+        </tr>
+        <tr>
+          <td>Tokens of Creator</td>
+          <td id="creator-token"></td>
+        </tr>
+        <tr>
+          <td>Tokens of 0x30fe934378289468eb7715baa32078150a18cebf</td>
+          <td id="acc-token"></td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td id="status"></td>
+        </tr>
+        <tr>
+          <td>getTransactionCount</td>
+          <td id="getTransactionCount"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h1>Send Token</h1><div></div>
+  <h3>1. From owner to any address</h3>
+  <div id="msg"></div>
+  <div id="address1"></div>
+  <input type="text" id="addressReceive" placeholder="Address receive"/>
+  <input type="text" id="numberToken" placeholder="Number token"/>
+  <a href="#" onclick="sendToken()" class="btn btn-primary">Send</a>
+
+   <h3>2. From any address to any address</h3>
+  <div id="msg1"></div>
+  <div id="address2"></div>
+  <input type="text" id="addressSend" placeholder="Address send"/><div></div>
+  <input type="text" id="addressReceive1" placeholder="Address receive"/>
+  <input type="text" id="numberToken1" placeholder="Number token"/>
+  <a href="#" onclick="sendTokenFrom()" class="btn btn-primary">Send</a>
+
+  <h1>Balance of</h1>
+  <div id="msgbalance"></div>
+  <div id="address2"></div>
+  <input type="text" id="addressBalance" placeholder="Input address"/>
+  <label for="balance-token" id = "balance-token"></label>
+
+  <a href="#" onclick="viewBalance()" class="btn btn-primary">View</a>
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="app.js"></script>
+</html>
